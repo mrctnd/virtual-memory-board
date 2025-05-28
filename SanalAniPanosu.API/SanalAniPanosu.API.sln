@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanalAniPanosu.API", "SanalAniPanosu.API.csproj", "{1E4D31BF-B28D-EA41-B63B-DDBB954FE15A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E4D31BF-B28D-EA41-B63B-DDBB954FE15A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E4D31BF-B28D-EA41-B63B-DDBB954FE15A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E4D31BF-B28D-EA41-B63B-DDBB954FE15A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E4D31BF-B28D-EA41-B63B-DDBB954FE15A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3850F815-66C6-44E6-9ECC-40F4D5B0E152}
+	EndGlobalSection
+EndGlobal

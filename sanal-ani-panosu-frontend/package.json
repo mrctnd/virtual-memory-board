@@ -1,0 +1,41 @@
+{
+  "name": "virtual-memory-board-frontend",
+  "version": "1.0.0",
+  "description": "Frontend application for Virtual Memory Board - A modern web app for creating and sharing memory boards",
+  "private": true,
+  "author": "Virtual Memory Board Team",
+  "keywords": ["nextjs", "react", "memory-board", "social", "memories", "tailwindcss"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/virtual-memory-board"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "js-cookie": "^3.0.5",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod-to-json-schema": "^3.24.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.0"
+  },
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ]
+}
