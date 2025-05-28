@@ -1,5 +1,7 @@
 # 🎯 Virtual Memory Board (Sanal Anı Panosu)
 
+> **🤖 AI-Powered Development**: Bu web sitesi uygulamasını tamamen yapay zeka (GitHub Copilot) birlikte geliştirdim.
+
 A modern, full-stack web application for creating and sharing memory boards with an intuitive user interface. Built with Next.js frontend and ASP.NET Core backend.
 
 ![Virtual Memory Board](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
