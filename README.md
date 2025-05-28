@@ -1,6 +1,6 @@
 # 🎯 Virtual Memory Board (Sanal Anı Panosu)
 
-> **🤖 AI-Powered Development**: Bu web sitesi uygulamasını tamamen yapay zeka (GitHub Copilot) birlikte geliştirdim.
+> **🤖 AI-Powered Development**: Sanal Anı Panosu uygulamasını tamamen yapay zeka (GitHub Copilot) ile birlikte geliştirdim.
 
 A modern, full-stack web application for creating and sharing memory boards with an intuitive user interface. Built with Next.js frontend and ASP.NET Core backend.
 
