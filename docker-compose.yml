@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: virtual-memory-board-db
+    environment:
+      POSTGRES_DB: VirtualMemoryBoard
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  # Backend API
+  api:
+    build:
+      context: ./SanalAniPanosu.API
+      dockerfile: Dockerfile
+    container_name: virtual-memory-board-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Host=postgres;Database=VirtualMemoryBoard;Username=postgres;Password=postgres123
+      - JwtSettings__Key=your-super-secret-jwt-key-for-production-change-this
+      - JwtSettings__Issuer=VirtualMemoryBoard.API
+      - JwtSettings__Audience=VirtualMemoryBoard.Client
+      - JwtSettings__ExpireInDays=7
+    ports:
+      - "5154:8080"
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    restart: unless-stopped
+    volumes:
+      - api_uploads:/app/Uploads
+
+  # Frontend Application
+  frontend:
+    build:
+      context: ./sanal-ani-panosu-frontend
+      dockerfile: Dockerfile
+    container_name: virtual-memory-board-frontend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5154/api
+      - NODE_ENV=production
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    networks:
+      - app-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  api_uploads:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge

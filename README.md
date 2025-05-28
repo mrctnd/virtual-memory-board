@@ -73,12 +73,30 @@ SanalAniPanosu.API/
 - **PostgreSQL** database
 - **Git**
 
+### Quick Start with Docker
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/mrctnd/virtual-memory-board.git
+   cd virtual-memory-board
+   ```
+
+2. **Start with Docker Compose**
+   ```bash
+   docker-compose up -d
+   ```
+
+3. **Access the application**
+   - Frontend: http://localhost:3000
+   - API: http://localhost:5154
+   - Database: localhost:5432
+
 ### Backend Setup
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd SanalAniPanosu.API
+   git clone https://github.com/mrctnd/virtual-memory-board.git
+   cd virtual-memory-board/SanalAniPanosu.API
    ```
 
 2. **Install dependencies**
@@ -103,7 +121,7 @@ SanalAniPanosu.API/
 
 1. **Navigate to frontend directory**
    ```bash
-   cd sanal-ani-panosu-frontend
+   cd virtual-memory-board/sanal-ani-panosu-frontend
    ```
 
 2. **Install dependencies**

@@ -1,11 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Enable standalone output for Docker
+  output: 'standalone',
+  
   images: {
     remotePatterns: [
       {
         protocol: 'http',
         hostname: 'localhost',
         port: '5154',
+        pathname: '/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'api',
+        port: '8080',
         pathname: '/**',
       },
     ],
